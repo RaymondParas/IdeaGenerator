@@ -1,0 +1,10 @@
+2020-08-26 20:52:59,001 WARN com.IdeaGenerator.IdeaGenerator.exceptionHandle.CustomExceptionHandler [http-nio-8080-exec-2] Idea 'Wendy' could not be found
+2020-08-26 21:05:39,192 WARN com.IdeaGenerator.IdeaGenerator.services.IdeaGeneratorService [http-nio-8080-exec-5] No names remained after filtering out non-existent names
+2020-08-26 21:05:39,194 WARN com.IdeaGenerator.IdeaGenerator.exceptionHandle.CustomExceptionHandler [http-nio-8080-exec-5] Ideas entered could not be found
+2020-08-26 21:12:48,971 WARN com.IdeaGenerator.IdeaGenerator.services.IdeaGeneratorService [http-nio-8080-exec-2] No names remained after filtering out non-existent names
+2020-08-26 21:12:48,979 WARN com.IdeaGenerator.IdeaGenerator.exceptionHandle.CustomExceptionHandler [http-nio-8080-exec-2] Ideas entered could not be found
+2020-08-26 21:13:00,740 WARN com.IdeaGenerator.IdeaGenerator.services.IdeaGeneratorService [http-nio-8080-exec-3] No new ideas remained after filtering out already existing ideas
+2020-08-26 21:13:00,741 WARN com.IdeaGenerator.IdeaGenerator.exceptionHandle.CustomExceptionHandler [http-nio-8080-exec-3] Ideas entered already exist
+2020-08-26 23:11:34,860 WARN com.IdeaGenerator.IdeaGenerator.exceptionHandle.CustomExceptionHandler [http-nio-8080-exec-4] No ideas of 'Dessert' idea type available
+2020-08-26 23:11:50,640 WARN com.IdeaGenerator.IdeaGenerator.exceptionHandle.CustomExceptionHandler [http-nio-8080-exec-5] No ideas of 'Dessert' idea type available
+2020-08-26 23:13:33,337 WARN com.IdeaGenerator.IdeaGenerator.exceptionHandle.CustomExceptionHandler [http-nio-8080-exec-7] No ideas of 'Dessert' idea type available

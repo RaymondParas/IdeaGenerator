@@ -5,7 +5,8 @@ import com.IdeaGenerator.IdeaGenerator.exceptionHandle.RequestException;
 import com.IdeaGenerator.IdeaGenerator.models.Idea;
 import com.IdeaGenerator.IdeaGenerator.models.IdeaType;
 import com.IdeaGenerator.IdeaGenerator.utilities.DamerauLevenshtein;
-import org.jboss.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +16,7 @@ import java.util.stream.Collectors;
 @Service
 public class IdeaGeneratorService {
     private final IdeaRepository repo;
-    private Logger log = Logger.getLogger(this.getClass());
+    private Logger log = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     public IdeaGeneratorService(IdeaRepository repo){
@@ -67,12 +68,11 @@ public class IdeaGeneratorService {
 
     public List<Idea> IdeaMatch(String name) {
         List<Idea> allIdeas = GetAllIdeas();
-        List<Idea> matches = allIdeas.stream().filter(idea -> {
+        return allIdeas.stream().filter(idea -> {
             String ideaName = idea.getName().toUpperCase().replace(" ", "");
             return name.contains(ideaName) || ideaName.contains(name)
                     || DamerauLevenshtein.matchPercentage(name, ideaName) >= 75;
         }).collect(Collectors.toList());
-        return matches;
     }
 
     public boolean IdeaExists(String name){
